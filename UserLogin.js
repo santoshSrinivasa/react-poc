@@ -1,4 +1,5 @@
 import React from "react";
+import Welcome from "./Welcome";
 
 export default class UserLogin extends React.Component 
 {
@@ -20,6 +21,7 @@ export default class UserLogin extends React.Component
       <input type="password" name="passwordEntered" onChange={this.props.onChange}/>
       </div>
       <button type="button" onClick={this.props.onClick}>Login</button>
+      <Welcome/>
       </div>
     );
   }

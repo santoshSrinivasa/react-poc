@@ -5,3 +5,55 @@ h1, p {
 .welcomeHeader{
   background-color:coral;
 }
+
+ul, li {
+  list-style-type:none;
+  text-decoration:none;
+  display: flex;
+}
+
+li{
+  height:50px;
+  border: 1px solid;
+}
+
+li a{
+  align-self: center;
+  text-decoration: none;
+  width: 300px;
+  text-align: center;
+}
+
+.levelId{
+  display:flex;
+}
+
+.margin{
+  margin: 10px
+}
+
+.marginLevel{
+  margin-left:20px;
+}
+
+.marginEan{
+  margin-left:40px;
+}
+
+.searchBorder{
+  border: 1px solid;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.searchRadio{
+  width: 300px;
+}
+
+.searchCheckbox{
+  width: 150px;
+}
+
+.searchContainer{
+  display: flex;
+}

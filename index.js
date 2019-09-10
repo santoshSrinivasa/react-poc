@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './style.css';
 import UserLogin from "./UserLogin";
 import Welcome from "./Welcome";
-import BrowserRouter from "react-router";
+import { BrowserRouter} from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -43,9 +43,11 @@ class App extends Component {
   }
   render() {
     return (
+      <BrowserRouter>
       <div>
         <UserLogin onChange={this.handleChange} onClick={this.handleClick}/>
       </div>
+     </BrowserRouter>
     );
   }
 }
