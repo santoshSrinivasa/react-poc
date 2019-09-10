@@ -16,8 +16,10 @@ class App extends Component {
   }
   handleChange(event)
   {
-    const name = event.target.value;
+    const name = event.target.name;
+    const value = event.target.type === "text" ? event.target.value : event.target.value;
     console.log(name);
+    console.log(value);
   }
   
   render() {
