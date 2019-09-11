@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Route,
   Link,
-  HashRouter
+  BrowserRouter
 } from "react-router-dom";
 import SearchOptions from "./SearchOptions";
 import CustomerInfo from "./CustomerInfo";
@@ -10,10 +10,13 @@ import EAN from "./EAN";
 import PriceMap from "./PriceMap";
 
 
-class Welcomepage extends Component {
+export default class Welcome extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
-     <HashRouter>
+     <BrowserRouter>
      <div>
       <div>
         <ul>
@@ -30,9 +33,7 @@ class Welcomepage extends Component {
         </div>
        </div>
      </div>
-     </HashRouter>
+     </BrowserRouter>
     );
   }
 }
- 
-export default Welcomepage;

@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
+import {
+  Route,
+  Link,
+  BrowserRouter
+} from "react-router-dom";
+
 import UserLogin from "./UserLogin";
 import Welcome from "./Welcome";
-import { BrowserRouter} from "react-router-dom";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) 
+  {
+    super(props);
     this.state = {
       username:"Santosh",
       password:12345,
@@ -25,7 +31,7 @@ class App extends Component {
     if(name == "userNameEntered")
     this.setState({userNameEntered: value});
     if(name == "passwordEntered")
-    this.setState({passwordEntered: value}); 
+    this.setState({passwordEntered: value});
   }
   handleClick(event)
   {
@@ -36,18 +42,14 @@ class App extends Component {
     const pwdEntered = this.state.passwordEntered
     if((nameDefault == nameEntered)&&(pwdDefault == pwdEntered)){
       this.setState({isloginValid: true});
-      console.log(this.state.isloginValid)
-    }else{
-      console.log(this.state.isloginValid)
+      //this.props.history.push("/Welcome");
     }
   }
   render() {
     return (
-      <BrowserRouter>
       <div>
         <UserLogin onChange={this.handleChange} onClick={this.handleClick}/>
       </div>
-     </BrowserRouter>
     );
   }
 }

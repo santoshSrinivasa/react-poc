@@ -21,7 +21,7 @@ export default class UserLogin extends React.Component
       <input type="password" name="passwordEntered" onChange={this.props.onChange}/>
       </div>
       <button type="button" onClick={this.props.onClick}>Login</button>
-      <Welcome/>
+            <Welcome/>
       </div>
     );
   }
