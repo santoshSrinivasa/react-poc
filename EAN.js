@@ -2,5 +2,5 @@ import React from "react";
 
 export default function EAN()
 {
-  return <h3>Welcome to EAN Page</h3>;
+  return <h3>EAN Page</h3>;
 }

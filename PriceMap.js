@@ -2,5 +2,5 @@ import React from "react";
 
 export default function PriceMap()
 {
-  return <h3>Welcome to PriceMap Page</h3>;
+  return <h3>Price Map Page</h3>;
 }

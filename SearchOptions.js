@@ -11,8 +11,8 @@ export default class SearchOptions extends React.Component
   {
     return(
       <div>
-      <div className="col-sm-12 searchContainer">
-        <div className="col-md-3 searchBorder searchRadio">
+      <div className="col-md-12 searchContainer">
+        <div className="col-md-3 searchBorder">
           <div className="col-md-3 levelId margin">
           <input type="radio"/>Level Id <br/>
           <input type="text" className="marginLevel"/>
