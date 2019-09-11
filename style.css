@@ -2,8 +2,14 @@ h1, p {
   font-family: Lato;
 }
 
+.userLogin{
+    height: -webkit-fill-available;
+    background-color: antiquewhite;
+}
 .welcomeHeader{
   background-color:coral;
+  height: 50px;
+  text-align: center;
 }
 
 ul, li {

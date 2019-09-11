@@ -11,7 +11,7 @@ export default class UserLogin extends React.Component
   {
     return(
       <div className="userLogin">
-      <h3 className="welcomeHeader">Welcome to Xyz project</h3>
+      <div className="welcomeHeader">Welcome</div>
       <div className="col-md-12">
       <label>User name : </label>
       <input type="text" name="userNameEntered" onChange={this.props.onChange}/>
