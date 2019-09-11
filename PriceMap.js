@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function PriceMap()
+export default class PriceMap extends React.Component
 {
-  return <h3>Price Map Page</h3>;
+  render()
+  {
+    return <h3>Price Map Page</h3>;
+  } 
 }

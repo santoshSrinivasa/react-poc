@@ -3,10 +3,6 @@ import {Button} from "react-bootstrap";
 
 export default class SearchOptions extends React.Component
 {
-  constructor()
-  {
-    super();
-  }
   render()
   {
     return(

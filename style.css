@@ -46,6 +46,17 @@ li a{
   margin-left:40px;
 }
 
+.marginTop{
+  margin-top: 10px;
+}
+
+.marginUsername{
+  margin-left:10px;
+}
+
+.marginPwd{
+  margin-left:17px;
+}
 .searchBorder{
   border: 1px solid;
   margin: 0 auto;
@@ -61,4 +72,13 @@ li a{
 
 .searchContainer{
   display: flex;
+}
+.mainDiv{
+    top: 45%;
+    left: 40%;
+    position: absolute;
+}
+
+.alignItem{
+  text-align: center;
 }

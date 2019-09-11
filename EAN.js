@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function EAN()
+export default class EAN extends React.Component
 {
-  return <h3>EAN Page</h3>;
+  render()
+  {
+     return <h3>EAN Page</h3>;
+  }
+ 
 }

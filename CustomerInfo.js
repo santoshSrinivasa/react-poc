@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function CustomerInfo()
+export default class CustomerInfo extends React.Component
 {
-  return <h3>Customer Info Page</h3>;
+  render()
+  {
+    return <h3>Customer Info Page</h3>;
+  }
+ 
 }

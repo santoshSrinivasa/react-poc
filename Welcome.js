@@ -9,7 +9,6 @@ import CustomerInfo from "./CustomerInfo";
 import EAN from "./EAN";
 import PriceMap from "./PriceMap";
 
-
 export default class Welcome extends React.Component {
   constructor(props){
     super(props);
