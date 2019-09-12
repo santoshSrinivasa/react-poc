@@ -2,7 +2,8 @@ import React from "react";
 import {
   Route,
   Link,
-  BrowserRouter
+  BrowserRouter,
+  Switch
 } from "react-router-dom";
 import SearchOptions from "./SearchOptions";
 import CustomerInfo from "./CustomerInfo";
@@ -15,24 +16,27 @@ export default class Welcome extends React.Component {
   }
   render() {
     return (
-     <BrowserRouter>
      <div>
+      <BrowserRouter history>
       <div>
         <ul>
         <li><Link exact to="/">SearchOptions</Link></li>
-        <li><Link exact to="/CustomerInfo">CustomerInfo</Link></li>
-        <li><Link exact to="/EAN">EAN</Link></li>
-        <li><Link exact to="/PriceMap">PriceMap</Link></li>
+        <li><Link to="/CustomerInfo">CustomerInfo</Link></li>
+        <li><Link to="/EAN">EAN</Link></li>
+        <li><Link to="/PriceMap">PriceMap</Link></li>
         </ul>
         <div>
+        <Switch>
           <Route exact path="/" component={SearchOptions} />
-          <Route exact path="/CustomerInfo" component={CustomerInfo} />
-          <Route exact path="/EAN" component={EAN} />
-          <Route exact path="/PriceMap" component={PriceMap} />
+          <Route path="/CustomerInfo" component={CustomerInfo} />
+          <Route path="/EAN" component={EAN} />
+          <Route path="/PriceMap" component={PriceMap} />
+        </Switch>
         </div>
        </div>
+       </BrowserRouter>
      </div>
-     </BrowserRouter>
+     
     );
   }
 }

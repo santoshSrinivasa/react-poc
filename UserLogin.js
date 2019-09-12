@@ -1,4 +1,5 @@
 import React from "react";
+import Welcome from "./Welcome";
 
 export default class UserLogin extends React.Component 
 {
@@ -33,7 +34,8 @@ export default class UserLogin extends React.Component
     const pwdEntered = this.state.passwordEntered
     if((nameDefault == nameEntered)&&(pwdDefault == pwdEntered)){
       this.setState({isloginValid: true});
-      this.props.history.push('/SearchOptions');
+      console.log("true");
+      this.props.history.push("/Welcome");
     }
   }
   render()
@@ -50,7 +52,9 @@ export default class UserLogin extends React.Component
       <label>Password : </label>
       <input type="password" name="passwordEntered" className="marginPwd" onChange={this.handleChange}/>
       </div>
-      <div className="alignItem marginTop"><button type="button" onClick={this.handleClick}>Login</button></div>
+      <div className="alignItem marginTop">
+      <button type="button" onClick={this.handleClick}>Login</button>
+      </div>
       </div>
       </div>
     );
