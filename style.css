@@ -89,3 +89,8 @@ li a{
   width :10px;
   margin: 0 auto;
 }
+
+.loginInvalid{
+  text-align: center;
+  color: red;
+}

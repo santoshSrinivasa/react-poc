@@ -10,6 +10,7 @@ export default class UserLogin extends React.Component {
       userNameEntered: "",
       passwordEntered: "",
       isloginValid: false,
+      invalidFlag:''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -31,6 +32,9 @@ export default class UserLogin extends React.Component {
     if ((nameDefault == nameEntered) && (pwdDefault == pwdEntered)) {
       this.setState({ isloginValid: true });  
       this.props.history.push("/searchOptions")    
+    }else{
+      const invalid = "Invalid User login"
+      this.setState({invalidFlag:invalid})
     }
   }
   render() {
@@ -49,6 +53,7 @@ export default class UserLogin extends React.Component {
           <div className="alignItem marginTop">
             <button type="button" onClick={this.handleClick}>Login</button>
           </div>
+          <h3 className="loginInvalid">{this.state.invalidFlag}</h3>
         </div>        
       </div>
     );
