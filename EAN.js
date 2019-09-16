@@ -1,10 +1,16 @@
 import React from "react";
+import NavigationBar from "./NavigationBar";
 
 export default class EAN extends React.Component
 {
   render()
   {
-     return <h3>EAN Page</h3>;
+     return (
+      <div>
+      <NavigationBar />
+      <h3 className="alignItem">EAN Page</h3>
+      </div>
+    );
   }
  
 }

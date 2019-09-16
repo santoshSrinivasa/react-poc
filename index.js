@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import UserLogin from "./UserLogin";
+import Welcome from "./Welcome";
 
-render(<UserLogin />, document.getElementById('root'));
+render(<Welcome  />, document.getElementById('root'));

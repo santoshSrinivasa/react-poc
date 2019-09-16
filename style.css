@@ -82,3 +82,8 @@ li a{
 .alignItem{
   text-align: center;
 }
+
+.searchBtn{
+  width :10px;
+  margin: 0 auto;
+}
