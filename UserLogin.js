@@ -1,5 +1,11 @@
 import React from "react";
 import Welcome from "./Welcome";
+import {
+  Route,
+  Link,
+  BrowserRouter,
+  Switch
+} from "react-router-dom";
 
 export default class UserLogin extends React.Component 
 {
@@ -35,13 +41,14 @@ export default class UserLogin extends React.Component
     if((nameDefault == nameEntered)&&(pwdDefault == pwdEntered)){
       this.setState({isloginValid: true});
       console.log("true");
-      this.props.history.push("/Welcome");
+      history.push("/Welcome");
     }
   }
   render()
   {
     return(
       <div className="userLogin">
+      <BrowserRouter history>
       <div className="welcomeHeader">Welcome</div>
       <div className="mainDiv">
       <div className="col-md-12">
@@ -56,6 +63,9 @@ export default class UserLogin extends React.Component
       <button type="button" onClick={this.handleClick}>Login</button>
       </div>
       </div>
+      <Link to="/Welcome"></Link>
+      <Route path="/Welcome" component={Welcome} />
+      </BrowserRouter>
       </div>
     );
   }
