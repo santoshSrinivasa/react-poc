@@ -21,6 +21,7 @@ ul, li {
 li{
   height:50px;
   border: 1px solid;
+  background-color: rebeccapurple;
 }
 
 li a{
@@ -28,6 +29,7 @@ li a{
   text-decoration: none;
   width: 300px;
   text-align: center;
+  color: white;
 }
 
 .levelId{
