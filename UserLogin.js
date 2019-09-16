@@ -40,7 +40,6 @@ export default class UserLogin extends React.Component {
   render() {
     return (
       <div className="userLogin">
-        <div className="welcomeHeader">Welcome</div>
         <div className="mainDiv">
           <div className="col-md-12">
             <label>User name : </label>

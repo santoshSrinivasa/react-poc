@@ -19,7 +19,8 @@ export default class Welcome extends React.Component {
     return (
      <div>
       <BrowserRouter history>
-      <div>       
+      <div> 
+        <div className="welcomeHeader">Welcome To Customer Pricing Map</div>      
         <div>
         <Switch>
           <Route exact path="/" component={UserLogin} />
