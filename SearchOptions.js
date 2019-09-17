@@ -20,11 +20,11 @@ export default class SearchOptions extends React.Component
     event.preventDefault();
     if(this.state.radioValue == 'LevelId')
     {
-      const value = this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
+      const value = "Search value is" + ' ' + this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
       this.setState({searchValue:value})
     }else if(this.state.radioValue == 'EAN')
     {
-      const value = this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
+      const value =  "Search value is" + ' ' + this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
       this.setState({searchValue:value})
     }
   }
