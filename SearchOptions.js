@@ -1,6 +1,5 @@
 import React from "react";
 import NavigationBar from "./NavigationBar";
-import { Container, Row, Col } from 'reactstrap';
 
 export default class SearchOptions extends React.Component
 {
@@ -12,7 +11,8 @@ export default class SearchOptions extends React.Component
       levelIdValue:'',
       eanValue:'',
       cashcheckBoxValue:'',
-      deletecheckBoxValue:''
+      deletecheckBoxValue:'',
+      searchValue:''
     }
   }
   searchClick = event =>
@@ -20,11 +20,15 @@ export default class SearchOptions extends React.Component
     event.preventDefault();
     if(this.state.radioValue == 'LevelId')
     {
-      console.log("search value is",this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue);
-    }else if(this.state.radioValue == 'EAN'){
-      console.log("search value is",this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue);
+      const value = this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
+      console.log(value);
+      this.setState({searchValue:value})
+    }else if(this.state.radioValue == 'EAN')
+    {
+      const value = this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
+      console.log(value);
+      this.setState({searchValue:value})
     }
-    
   }
 
 levelIdChange = event =>
@@ -86,6 +90,9 @@ radioChange= (event) =>
         </div>
         <div className="searchBtn">
         <button type="submit" onClick={this.searchClick}>Search</button>
+        </div>
+        <div className="loginInvalid">
+        <h3>{this.state.searchValue}</h3>
         </div>
         </div>
     );
