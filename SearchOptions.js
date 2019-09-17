@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "./NavigationBar";
+import ViewData from "./viewData";
 
 export default class SearchOptions extends React.Component
 {
@@ -90,7 +91,7 @@ radioChange= (event) =>
         <button type="submit" onClick={this.searchClick}>Search</button>
         </div>
         <div className="loginInvalid">
-        <h3>{this.state.searchValue}</h3>
+        <ViewData values = {this.state.searchValue}/>
         </div>
         </div>
     );
