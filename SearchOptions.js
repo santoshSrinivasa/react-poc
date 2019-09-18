@@ -1,8 +1,9 @@
 import React from "react";
 import NavigationBar from "./NavigationBar";
 import ViewData from "./viewData";
+import {connect} from "react-redux"
 
-export default class SearchOptions extends React.Component
+class SearchOptions extends React.Component
 {
   constructor()
   {
@@ -23,10 +24,12 @@ export default class SearchOptions extends React.Component
     {
       const value = "Search value is" + ' ' + this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
       this.setState({searchValue:value})
+      this.props.searchUpdated(this.state.searchValue);
     }else if(this.state.radioValue == 'EAN')
     {
       const value =  "Search value is" + ' ' + this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
       this.setState({searchValue:value})
+      this.props.searchUpdated(this.state.searchValue);
     }
   }
 
@@ -97,3 +100,17 @@ radioChange= (event) =>
     );
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    searchUpdated: (details) => dispatch({ type: 'LOGINDETAILS', details }),
+  }
+
+}
+function mapStateToProps(state) {
+  return { 
+  searchValueStore : state,
+ };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchOptions);
