@@ -94,7 +94,7 @@ radioChange= (event) =>
         <button type="submit" onClick={this.searchClick}>Search</button>
         </div>
         <div className="loginInvalid">
-        <ViewData values = {this.state.searchValue}/>
+        <ViewData/>
         </div>
         </div>
     );

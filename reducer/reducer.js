@@ -1,8 +1,5 @@
 const globalstate = {
-  details: {
-    name: "",
-  },
-  test:"Hi"
+      search : "",
 }
 function reducer(state = globalstate, action) {
   switch (action.type) {

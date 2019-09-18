@@ -6,7 +6,11 @@ export default class ViewData extends React.Component {
   }
   render(){
     return(
-      <h3>{this.props.values}</h3>
+      <h3>{this.props.state}</h3>
     );
   }
+}
+
+function mapStateToProps(state) {
+  return { state };
 }
