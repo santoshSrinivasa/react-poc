@@ -8,7 +8,7 @@ function reducer(state = globalstate, action) {
       console.log("action", action)
       return {
         ...state,
-      details : action.details
+      details : action.searchvalue
       }
       default:
         return state;

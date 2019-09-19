@@ -5,9 +5,9 @@ import {connect} from "react-redux"
 
 class SearchOptions extends React.Component
 {
-  constructor()
+  constructor(props)
   {
-    super();
+    super(props);
     this.state={
       radioValue:'LevelId',
       levelIdValue:'',
@@ -94,7 +94,7 @@ radioChange= (event) =>
         <button type="submit" onClick={this.searchClick}>Search</button>
         </div>
         <div className="loginInvalid">
-        <ViewData/>
+        <ViewData searchValueStore = {this.props.searchValueStore}/>
         </div>
         </div>
     );
@@ -103,13 +103,14 @@ radioChange= (event) =>
 
 const mapDispatchToProps = dispatch => {
   return {
-    searchUpdated: (details) => dispatch({ type: 'LOGINDETAILS', details }),
+    searchUpdated: (details) => dispatch({ type: 'LOGINDETAILS', searchvalue:details }),
   }
 
 }
 function mapStateToProps(state) {
+  console.log(state);
   return { 
-  searchValueStore : state,
+  searchValueStore : state.details,
  };
 }
 
