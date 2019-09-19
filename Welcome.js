@@ -10,6 +10,7 @@ import CustomerInfo from "./CustomerInfo";
 import EAN from "./EAN";
 import PriceMap from "./PriceMap";
 import UserLogin from './UserLogin';
+import styled from 'styled-components';
 
 export default class Welcome extends React.Component {
   constructor(props){
@@ -20,7 +21,7 @@ export default class Welcome extends React.Component {
      <div>
       <BrowserRouter history>
       <div> 
-        <div className="welcomeHeader">Welcome To Customer Pricing Map</div>      
+        <NavBar>Welcome To Customer Pricing Map</NavBar>     
         <div>
         <Switch>
           <Route exact path="/" component={UserLogin} />
@@ -37,3 +38,9 @@ export default class Welcome extends React.Component {
     );
   }
 }
+
+const NavBar = styled.div`
+  background-color:coral;
+  height: 50px;
+  text-align: center;
+`;

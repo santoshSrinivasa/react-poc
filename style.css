@@ -6,11 +6,6 @@ h1, p {
     height: -webkit-fill-available;
     background-color: antiquewhite;
 }
-.welcomeHeader{
-  background-color:coral;
-  height: 50px;
-  text-align: center;
-}
 
 ul, li {
   list-style-type:none;
