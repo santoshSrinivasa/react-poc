@@ -16,7 +16,6 @@ class SearchOptions extends React.Component {
       cashcheckBoxValue: '',
       deletecheckBoxValue: '',
       searchValue: '',
-      post: []
     }
   }
 
