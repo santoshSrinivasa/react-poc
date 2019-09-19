@@ -1,6 +1,7 @@
 import React from "react";
+import {connect} from "react-redux";
 
-export default class ViewData extends React.Component {
+class ViewData extends React.Component {
   constructor(props){
     super(props);
   }
@@ -12,3 +13,12 @@ export default class ViewData extends React.Component {
 }
 
 
+function mapStateToProps(state) {
+  console.log(state);
+  return { 
+  searchValueStore : state.data.details,
+ };
+}
+
+
+export default connect(mapStateToProps)(ViewData);

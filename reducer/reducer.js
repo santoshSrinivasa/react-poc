@@ -1,14 +1,18 @@
 const globalstate = {
-      details : "",
+      details : "", 
+     data : {
+       details : ""
+      }
 }
 function reducer(state = globalstate, action) {
   switch (action.type) {
     case "LOGINDETAILS":
       console.log("state is",state);
-      console.log("action", action)
+      console.log("action-->", action.searchvalue)
+
       return {
         ...state,
-      details : action.searchvalue
+      data :{details : action.searchvalue} 
       }
       default:
         return state;

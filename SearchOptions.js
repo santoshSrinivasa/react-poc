@@ -23,13 +23,11 @@ class SearchOptions extends React.Component
     if(this.state.radioValue == 'LevelId')
     {
       const value = "Search value is" + ' ' + this.state.radioValue + '-' + this.state.levelIdValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
-      this.setState({searchValue:value})
-      this.props.searchUpdated(this.state.searchValue);
+      this.props.searchUpdated(value);
     }else if(this.state.radioValue == 'EAN')
     {
       const value =  "Search value is" + ' ' + this.state.radioValue + '-' + this.state.eanValue + '-' + this.state.cashcheckBoxValue + '-' + this.state.deletecheckBoxValue;
-      this.setState({searchValue:value})
-      this.props.searchUpdated(this.state.searchValue);
+      this.props.searchUpdated(value);
     }
   }
 
@@ -94,7 +92,7 @@ radioChange= (event) =>
         <button type="submit" onClick={this.searchClick}>Search</button>
         </div>
         <div className="loginInvalid">
-        <ViewData searchValueStore = {this.props.searchValueStore}/>
+        <ViewData/>
         </div>
         </div>
     );
@@ -110,7 +108,7 @@ const mapDispatchToProps = dispatch => {
 function mapStateToProps(state) {
   console.log(state);
   return { 
-  searchValueStore : state.details,
+  searchValueStore : state.data.details,
  };
 }
 
