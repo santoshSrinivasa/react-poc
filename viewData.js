@@ -5,6 +5,7 @@ export default class ViewData extends React.Component {
     super(props);
   }
   render(){
+    console.log(this.props.state);
     return(
       <h3>{this.props.state}</h3>
     );
